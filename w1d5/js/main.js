@@ -121,7 +121,6 @@ printFibo(6,0,1);
 function startTime() {
   
     let current_datetime = new Date()
-    console.log(current_datetime.toString());
     let formatted_date = current_datetime.getFullYear() + 
             "-" + addZero(current_datetime.getMonth() + 1) + 
             "-" + addZero(current_datetime.getDate()) +
