@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Web form 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='js/eventHandler.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">MUM Golden Dome Market : : : SRM System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="divider-vertical"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Suppliers</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <span class="navbar-text">Hello!</span> 
+            <button type="button" class="btn btn-light">Logout</button>
+          </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row p-3">
+            <h2>New Product Form</h2>
+        </div>
+        <form method="POST" id="product-form" onsubmit="return onSubmitForm2();">
+            <div class="row justify-content-md-center">
+                <div class="col-6"> 
+                    <div class="form-group">
+                        <label>Product number</label>
+                        <input type="number"  name='pnumber' class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text"  name='name' class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Unit Price</label>
+                        <input type="number" step="any" name="unit-price" class="form-control" required value="0.0"/>
+                    </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="form-group">
+                        <label>Quantity in stock</label>
+                        <input type="number"  name='quantity' class="form-control" required value="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Supplier:</label>
+                        <select class="form-control" required name="supplierType">
+                            <option value="" selected disabled>Select a supplier</option>
+                            <option value="">A</option>
+                            <option value="">B</option>
+                            <option value="">C</option>
+                          </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Date Supplied</label>
+                        <input type="date" name="suppliedDate" min="1000-01-01" max="3000-12-31" class="form-control" required>
+                        <small class="form-text text-muted">Enter a valid Date.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-end">
+                <button type="reset" class="btn btn-outline-dark m-2">Reset</button>
+                <button type="button" class="btn btn-outline-danger m-2" onclick="alert('cancelled');">Cancel</button>
+                <button type="submit" class="btn btn-outline-primary m-2">Add Product</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
