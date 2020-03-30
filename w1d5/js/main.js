@@ -134,6 +134,7 @@ function startTime() {
     if(n <= 9) return "0" + n;
     return n
 }
+window.onload = startTime;
 
 
 
