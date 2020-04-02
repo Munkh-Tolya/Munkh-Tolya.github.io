@@ -1,3 +1,8 @@
+/**
+ * Author: Munkh-Erdene Tolya
+ * Description: Assigment 9, W2D3
+ */
+
 "use strict";
 // task 1
 const person = {
@@ -58,7 +63,7 @@ person1.setName("Peter");
 person1.dateOfBirth = "1998-12-10";
 person1.toString();
 
-
+// task 4
 $(function(){
     
     $('#loginForm').submit(function( event ) {
