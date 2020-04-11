@@ -1,6 +1,6 @@
 /**
  * @Author:Munkh-Erdene Tolya
- * description: Lab assignment 14 of CS 472 
+ * description: Lab assignment 15 of CS 472 
  */
 
 "use strict";
