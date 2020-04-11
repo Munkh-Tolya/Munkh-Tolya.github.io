@@ -66,14 +66,16 @@ person1.toString();
 // task 4
 $(function(){
     
-    $('#loginForm').submit(function( event ) {
-        event.preventDefault();
-        var fieldPair = {};
-        $(this).find("input").each(function(){
-            fieldPair[$(this).attr("name")] = $(this).val();
-        });
-        console.log(fieldPair);
-    });
+    $('#loginForm').submit(
+        function( event ) {
+            event.preventDefault();
+            var fieldPair = {};
+            $(this).find("input").each(function(){
+                fieldPair[$(this).attr("name")] = $(this).val();
+            });
+            console.log(fieldPair);
+        }
+    );
     $('#productForm').submit(function( event ) {
         event.preventDefault();
         let fieldPair = "";
@@ -87,3 +89,26 @@ $(function(){
     });
 });
 
+function log(parameter)  {
+	console.log(parameter);
+}
+function log(data, parameter) {
+	console.log(data + " --- " +  parameter);
+}
+log("1231");
+
+const x = 1;
+function f() {
+    let y = 2;
+    const sum = function() {
+    const z = 3;
+    console.log(x + y + z);
+    }
+    y = 10;
+    return sum;
+} //end of f
+const g = f();	
+g();
+
+
+console.log(this);

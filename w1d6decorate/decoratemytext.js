@@ -16,10 +16,10 @@ window.onload = function(){
     buttonMalkovitch.onclick = convertMalkovitch;
 
     function startDecorate(){
-        setInterval(decorate,500);
+        setInterval(decorate,2000);
     }
     function decorate(){
-        const textField = document.getElementById("text");
+        const textField = document.querySelector("#text");
         const size = parseInt(window.getComputedStyle(textField, null).fontSize) + 2;
         textField.style.fontSize = size + "px"; 
     }

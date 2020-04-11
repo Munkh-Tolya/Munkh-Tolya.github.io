@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>The South West - Regional Census</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script defer src='js/main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/style.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">The South West - Regional Census</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="divider-vertical"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Census Form</a>
+            </li>
+          </ul>
+          <span class="navbar-text" id="timeSpan">
+            Time here
+          </span>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <h4>Census Form</h4>
+        <hr/>
+        <form method="POST" id="form">
+            <div class="row justify-content-md-center">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label>*Full name:</label>
+                        <input type="text"  name='fname' class="form-control" required placeholder="Enter your Full Name">
+                        <small class="form-text text-muted">Enter your Full Name as printed on your Goverment-issued ID</small>
+                    </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="form-group">
+                        <label>*Citizen ID:</label>
+                        <input type="text"  name='cid' class="form-control" required placeholder="XXXXXXXXXX" pattern="\d{10}">
+                        <small class="form-text text-muted">Enter your 10-Digit Citized ID</small>
+                    </div>
+                    <div class="form-group">
+                        <label>*State: </label>
+                        <select class="form-control" required name="state">
+                            <option value="" selected disabled>Select...</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Texas">Texas</option>
+                          </select>
+                        <small class="form-text text-muted">Select your State of residence</small>
+                    </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="form-group">
+                        <label>*Social Security Number:</label>
+                        <input type="text"  name='ssn' class="form-control" required placeholder="XXX-XX-XXXX" pattern="^\d{3}-\d{2}-\d{4}$">
+                        <small class="form-text text-muted">Enter your Social Security Number(int the format shown)</small>
+                    </div>
+                    <div class="form-group">
+                        <label>*Senior Citizen?</label><br/>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" required name="senior" id="inlineRadio1" value="Yes">
+                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="senior" id="inlineRadio2" value="No">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-end">
+                <button type="reset" class="btn btn-dark m-2">Reset</button>
+                <button type="submit" class="btn btn-primary m-2">Submit</button>
+            </div>
+        </form>
+        <table class="table" id="infoTable">
+            <thead>
+              <tr>
+                <th scope="col">Citizen ID</th>
+                <th scope="col">Social Security</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">State</th>
+                <th scope="col">Senior</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </div>
+    <footer>
+        <div>
+            <span style="margin-left: 1em;">Munkh Tolya ::: CS472-WAP</span>
+            <span style="float: right;margin-right: 1em;">&copy; April 2020</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

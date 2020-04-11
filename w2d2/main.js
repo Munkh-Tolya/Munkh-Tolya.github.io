@@ -63,10 +63,10 @@ window.onload = function(){
         }
         const increaseSalary = function(percentage){
             const sal = getSalary();
-            this.setSalary(sal * (100+percentage)/100);
+            setSalary(sal * (100+percentage)/100);
         }
         const incrementAge = function(){
-            this.setAge(getAge() + 1);
+            setAge(getAge() + 1);
         }
         const printInfo = function(){
             console.log("Name: " + getName());

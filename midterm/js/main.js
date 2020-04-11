@@ -8,16 +8,26 @@ $(function(){
     $('#form').on('submit',function(event){
         event.preventDefault();
         let obj = {};
-        $(this).find("input").each(function(){
+        $(this).find("input,select").each(function(){
             obj[$(this).attr("name")] = $(this).val();
         });
+        console.log(obj);
         $('#infoTable > tbody').append('<tr>');
-        $('#infoTable > tbody').after($("<td>",{
-            "text":obj['fname']
-        })); 
-        $('#infoTable > tbody').after($("<td>",{
-            "text":obj['fname']
-        })); 
+            $('#infoTable > tbody').append($("<td>",{
+                "text":obj['cid']
+            })); 
+            $('#infoTable > tbody').append($("<td>",{
+                "text":obj['ssn']
+            })); 
+            $('#infoTable > tbody').append($("<td>",{
+                "text":obj['fname']
+            })); 
+            $('#infoTable > tbody').append($("<td>",{
+                "text":obj['state']
+            })); 
+            $('#infoTable > tbody').append($("<td>",{
+                "text": $("input[name='senior']:checked").val()
+            })); 
         $('#infoTable > tbody').append('</tr>');
  
     });
